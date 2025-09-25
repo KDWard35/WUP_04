@@ -70,6 +70,12 @@ summary.aov(model1)
 
 I found the p-value to be 0.000236, which is small enough to suggest a significant statistical difference in at least two categories. 
 
+```{r}
+par(mar = c(3,17, 2, 2))
+plot(TukeyHSD(model1,conf.level=0.98),las=2)
+```
+
+I found that the only intervals that do not pass through zero are the High School-Graduate and LT High School-Graduate ones. This shows that they are not significantly statistically different.
 
 # Discussion and Conclusion
 
